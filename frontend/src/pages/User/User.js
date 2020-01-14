@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import api from '../../services/api'
 import Pagination from '../../component/Pagination'
 import FormEdit from './FormEdit'
+import Headers from '../../services/Headers'
 
 const v1='v1';
 const admin = v1+'/admin';
@@ -106,7 +107,7 @@ mostrarFormEdit() {
 salvar(data) {   
  let id = this.state.data.id
  try {
-   const response = api.put(`${edit}/${id}`, JSON.stringify(data))
+   const response = api.put(`${edit}/${id}`, JSON.stringify(data), Headers)
         .then(resp => {
             const list = this.getUpdateList(resp.data)
             this.setState({lista:list})
