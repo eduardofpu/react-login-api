@@ -1,19 +1,13 @@
 # Back end
 ```
-O servidor do backend esta no arquivo 'server.js'
-O banco de dados e um arquivo json o qual esta no 'db.json'
-As depedencias esta no arquivo package.json
+O servidor do backend esta no https://github.com/eduardofpu/jwt-token-kotlin
 
-permissão para deletar pasta chmod 777 nomepasta
-
-1 - Pasta backend/  npm install
-2 - npm start  roda o local host  
-3 - npm run start-auth roda a authenticação  
-4 - http://localhost:8000
 ```
 
 # Front end
 ```
+Para deletar pasta com permissão: para deletar pasta chmod 777 nomepasta
+
 1 - Pasta frontend/  npm install
 2 - npm start  roda o local host
 3 - http://localhost:3000
@@ -31,13 +25,13 @@ curl POST http://localhost:8000/auth/register
 
 ```
 
-# SESSIONS
+# Login
 ```
 
-curl POST http://localhost:8000/sessions
+curl POST http://localhost:8000/login
 {
-  "email": "adriano@gmail.com",
-  "password":"123456"
+  "email": "admin@admin.com",
+  "password":"admin"
 }
 
 ```
